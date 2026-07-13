@@ -2,11 +2,8 @@ services:
 
   db:
     image: mysql:latest
-
     container_name: database_my
-
-    restart: always #unless-stopped #restart the container automatically if it crashes or the server reboots 
-        
+    restart: always 
     environment:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: fastapi_db
@@ -23,30 +20,15 @@ services:
 
   web:
     build: .
-
     container_name: fastapi-web
-
     ports:
         - "8000:8000"
     depends_on:
       db:
         condition: service_healthy     
+    
+    environment:
+      - DATABASE_URL=mysql+pymysql://root:1234@db/fastapi_db
         
-      
 volumes:
   mysql_data:
-
-        
-        
-        
-
-
-
-
-
-    
-
-
-
-
-  
