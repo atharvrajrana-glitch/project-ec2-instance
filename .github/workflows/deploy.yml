@@ -19,7 +19,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
 
           script: |
-            cd ~/DOCKER-TEST
+            cd ~/project-ec2-instance
 
             git pull origin main
 
