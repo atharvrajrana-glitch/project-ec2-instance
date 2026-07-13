@@ -11,8 +11,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return{"message":"Hello, World!"}
-
+    return{"message":"Hello, Rana"}
 
 
 @app.get("/users/by-height")
