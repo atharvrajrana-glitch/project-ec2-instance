@@ -8,7 +8,7 @@ services:
     restart: always #unless-stopped #restart the container automatically if it crashes or the server reboots 
         
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: fastapi_db
       MYSQL_ROOT_HOST: '%'
     ports:
